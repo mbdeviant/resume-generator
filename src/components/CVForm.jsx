@@ -6,7 +6,6 @@ function CVForm() {
     surname: "",
     education: "",
     experience: "",
-    // other fields...
   });
 
   const handleInputChange = (event) => {
@@ -25,7 +24,6 @@ function CVForm() {
         value={formData.name}
         onChange={handleInputChange}
       />
-      {/* other input fields... */}
     </form>
   );
 }
