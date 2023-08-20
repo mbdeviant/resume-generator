@@ -54,6 +54,10 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.personalInfo {
+  display: flex;
+  flex-direction: column;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
