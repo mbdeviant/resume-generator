@@ -1,15 +1,9 @@
-import CVDisplay from "./components/CVDisplay";
-import CVForm from "./components/CVForm";
+import PersonalInfo from "./components/CVForm/PersonalInfo";
 
 function App() {
   return (
     <div className="app">
-      <div className="left-column">
-        <CVForm />
-      </div>
-      <div className="right-column">
-        <CVDisplay />
-      </div>
+      <PersonalInfo />
     </div>
   );
 }
