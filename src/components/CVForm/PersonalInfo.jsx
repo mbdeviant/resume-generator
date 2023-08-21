@@ -1,7 +1,8 @@
 function PersonalInfo() {
   return (
     <>
-      <div className="personalInfo">
+      <section className="personalInfo">
+        <h2>Personal Info</h2>
         <label htmlFor="name">Name</label>
         <input type="text" id="name"></input>
         <label htmlFor="surname">Surname</label>
@@ -16,7 +17,7 @@ function PersonalInfo() {
         <input type="email" id="email" />
         <label htmlFor="about">About</label>
         <input type="text" id="about" />
-      </div>
+      </section>
     </>
   );
 }
