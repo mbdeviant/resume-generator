@@ -1,6 +1,6 @@
 import Buttons from "../buttons";
 
-function Experience() {
+export default function Experience() {
   return (
     <section className="experience">
       <h2>Experience</h2>
@@ -20,5 +20,3 @@ function Experience() {
     </section>
   );
 }
-
-export default Experience;

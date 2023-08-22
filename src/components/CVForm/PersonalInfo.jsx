@@ -1,6 +1,6 @@
 import Buttons from "../buttons";
 
-function PersonalInfo() {
+export default function PersonalInfo() {
   return (
     <>
       <section className="personalInfo">
@@ -24,5 +24,3 @@ function PersonalInfo() {
     </>
   );
 }
-
-export default PersonalInfo;

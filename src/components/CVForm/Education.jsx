@@ -1,6 +1,6 @@
 import Buttons from "../buttons";
 
-function Education() {
+export default function Education() {
   return (
     <section className="education">
       <h2>Education</h2>
@@ -18,5 +18,3 @@ function Education() {
     </section>
   );
 }
-
-export default Education;
