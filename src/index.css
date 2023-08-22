@@ -54,7 +54,9 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-.personalInfo {
+.infoForm,
+.experienceForm,
+.educationForm {
   display: flex;
   flex-direction: column;
 }
