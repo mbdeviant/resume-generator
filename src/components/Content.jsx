@@ -1,13 +1,17 @@
-import Forms from "./CVForm/Forms";
-import Footer from "./Footer";
-import Header from "./Header";
+import Education from "./CVForm/Education";
+import Experience from "./CVForm/Experience";
+import PersonalInfo from "./CVForm/PersonalInfo";
 
 export default function Content() {
   return (
     <>
-      <Header />
-      <Forms />
-      <Footer />
+      <div className="content">
+        <div className="forms">
+          <PersonalInfo />
+          <Education />
+          <Experience />
+        </div>
+      </div>
     </>
   );
 }
