@@ -6,12 +6,6 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
 }
 #root {
   min-width: 100%;
@@ -48,18 +42,19 @@ h1 {
 }
 .main-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   border: 2px solid gold;
 }
 .forms {
   display: flex;
+  padding-left: 13px;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
 }
 .btnContainer {
   display: flex;
   justify-content: space-between;
+  padding-top: 8px;
 }
 button {
   border-radius: 8px;
