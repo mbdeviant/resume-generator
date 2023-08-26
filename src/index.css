@@ -43,6 +43,7 @@ h1 {
 .main-container {
   display: flex;
   justify-content: center;
+  gap: 50px;
   border: 2px solid gold;
 }
 .forms {
