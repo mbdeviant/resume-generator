@@ -1,3 +1,3 @@
 export default function Preview() {
-  return;
+  return <div className="preview"></div>;
 }
