@@ -4,7 +4,7 @@ export default function PersonalInfo({
   onName,
   onSurname,
   onAdress,
-  onPhone,
+  onNumber,
   onEmail,
   onAbout,
 }) {
@@ -20,7 +20,7 @@ export default function PersonalInfo({
           <label htmlFor="adress">Adress</label>
           <input type="text" id="adress" onChange={onAdress} required />
           <label htmlFor="number">Phone Number</label>
-          <input type="tel" id="number" onChange={onPhone} required />
+          <input type="tel" id="number" onChange={onNumber} required />
           <label htmlFor="email">Email</label>
           <input type="email" id="email" onChange={onEmail} required />
           <label htmlFor="about">About</label>
