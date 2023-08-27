@@ -9,7 +9,7 @@ export default function PersonalPreview({
   name,
   surname,
   adress,
-  phone,
+  number,
   email,
   about,
 }) {
@@ -24,7 +24,7 @@ export default function PersonalPreview({
       </p>
       <p>
         <FontAwesomeIcon icon={faPhone} />
-        {phone}
+        {number}
       </p>
       <p>
         <FontAwesomeIcon icon={faEnvelope} />
