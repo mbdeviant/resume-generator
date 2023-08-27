@@ -6,7 +6,7 @@ export default function Preview({
   name,
   surname,
   adress,
-  phone,
+  number,
   email,
   about,
 }) {
@@ -16,7 +16,7 @@ export default function Preview({
         name={name}
         surname={surname}
         adress={adress}
-        phone={phone}
+        number={number}
         email={email}
         about={about}
       />
