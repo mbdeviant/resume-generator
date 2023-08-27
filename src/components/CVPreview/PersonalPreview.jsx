@@ -19,16 +19,16 @@ export default function PersonalPreview({
         {name} {surname}
       </h3>
       <p>
-        <FontAwesomeIcon icon={faEnvelope} />
-        {email}
-      </p>
-      <p>
         <FontAwesomeIcon icon={faLocationDot} />
         {adress}
       </p>
       <p>
         <FontAwesomeIcon icon={faPhone} />
         {phone}
+      </p>
+      <p>
+        <FontAwesomeIcon icon={faEnvelope} />
+        {email}
       </p>
       <p>{about}</p>
     </div>
