@@ -23,6 +23,9 @@ export default function PersonalInfo({
           <input type="email" id="email" onChange={onEmail} required />
           <label htmlFor="about">About</label>
           <input type="text" id="about" onChange={onAbout} />
+          <button type="submit" aria-label="save button">
+            Save
+          </button>
         </form>
       </section>
     </>
