@@ -5,32 +5,25 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function PersonalPreview({
-  name,
-  surname,
-  adress,
-  number,
-  email,
-  about,
-}) {
+export default function PersonalPreview({ personalInfo }) {
   return (
     <div className="personalPreview">
       <h3>
-        {name} {surname}
+        {personalInfo.name} {personalInfo.surname}
       </h3>
       <p>
         <FontAwesomeIcon icon={faLocationDot} />
-        {adress}
+        {personalInfo.address}
       </p>
       <p>
         <FontAwesomeIcon icon={faPhone} />
-        {number}
+        {personalInfo.number}
       </p>
       <p>
         <FontAwesomeIcon icon={faEnvelope} />
-        {email}
+        {personalInfo.email}
       </p>
-      <p>{about}</p>
+      <p>{personalInfo.about}</p>
     </div>
   );
 }
