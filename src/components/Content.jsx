@@ -22,14 +22,7 @@ export default function Content() {
             <Education />
             <Experience />
           </div>
-          <Preview
-            name={formData.name}
-            surname={formData.surname}
-            adress={formData.adress}
-            number={formData.number}
-            email={formData.email}
-            about={formData.about}
-          />
+          <Preview personalInfo={formData} />
         </div>
       </div>
     </>
