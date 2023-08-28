@@ -1,5 +1,3 @@
-import Buttons from "../buttons";
-
 export default function PersonalInfo({
   onName,
   onSurname,
@@ -25,7 +23,6 @@ export default function PersonalInfo({
           <input type="email" id="email" onChange={onEmail} required />
           <label htmlFor="about">About</label>
           <input type="text" id="about" onChange={onAbout} />
-          <Buttons />
         </form>
       </section>
     </>
