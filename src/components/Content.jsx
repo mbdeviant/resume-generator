@@ -13,7 +13,8 @@ export default function Content() {
   const [about, setAbout] = useState(null);
 
   function onName(e) {
-    setName(e.target.value);
+    const value = e.target.value;
+    setName(value);
   }
   function onSurname(e) {
     setSurname(e.target.value);
