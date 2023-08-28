@@ -2,24 +2,10 @@ import EducationPreview from "./EducationPreview";
 import ExperiencePreview from "./ExperiencePreview";
 import PersonalPreview from "./PersonalPreview";
 
-export default function Preview({
-  name,
-  surname,
-  adress,
-  number,
-  email,
-  about,
-}) {
+export default function Preview({ personalInfo }) {
   return (
     <section className="preview" aria-label="cv preview">
-      <PersonalPreview
-        name={name}
-        surname={surname}
-        adress={adress}
-        number={number}
-        email={email}
-        about={about}
-      />
+      <PersonalPreview personalInfo={personalInfo} />
       <EducationPreview />
       <ExperiencePreview />
     </section>
