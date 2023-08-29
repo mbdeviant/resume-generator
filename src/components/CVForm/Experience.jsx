@@ -2,7 +2,7 @@ import Buttons from "../buttons";
 
 export default function Experience() {
   return (
-    <section className="experience">
+    <section aria-label="Experience Info Form" className="experience">
       <h2>Experience</h2>
       <form className="experienceForm">
         <label htmlFor="position">Position</label>
