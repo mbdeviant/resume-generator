@@ -21,7 +21,7 @@ export default function Education({ onSubmit }) {
     onSubmit(educationData);
   };
   return (
-    <section className="education">
+    <section aria-label="Education Info Form" className="education">
       <h2>Education</h2>
       <form className="educationForm" onSubmit={handleSubmit}>
         <label htmlFor="university">University</label>
