@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function PersonalInfo({ onSubmit }) {
-  const [formData, setFormData] = useState({
+  const [personalData, setFormData] = useState({
     name: "",
     surname: "",
     address: "",
@@ -20,7 +20,7 @@ export default function PersonalInfo({ onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(formData);
+    onSubmit(personalData);
   };
 
   return (
@@ -33,7 +33,7 @@ export default function PersonalInfo({ onSubmit }) {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
+            value={personalData.name}
             onChange={handleInput}
             required
           />
@@ -42,7 +42,7 @@ export default function PersonalInfo({ onSubmit }) {
             type="text"
             id="surname"
             name="surname"
-            value={formData.surname}
+            value={personalData.surname}
             onChange={handleInput}
             required
           />
@@ -51,7 +51,7 @@ export default function PersonalInfo({ onSubmit }) {
             type="text"
             id="address"
             name="address"
-            value={formData.address}
+            value={personalData.address}
             onChange={handleInput}
             required
           />
@@ -60,7 +60,7 @@ export default function PersonalInfo({ onSubmit }) {
             type="tel"
             id="number"
             name="number"
-            value={formData.number}
+            value={personalData.number}
             onChange={handleInput}
             required
           />
@@ -69,7 +69,7 @@ export default function PersonalInfo({ onSubmit }) {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
+            value={personalData.email}
             onChange={handleInput}
             required
           />
@@ -78,7 +78,7 @@ export default function PersonalInfo({ onSubmit }) {
             type="text"
             id="about"
             name="about"
-            value={formData.about}
+            value={personalData.about}
             onChange={handleInput}
           />
           <button type="submit" aria-label="save button">
