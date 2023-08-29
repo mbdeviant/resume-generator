@@ -25,7 +25,7 @@ export default function PersonalInfo({ onSubmit }) {
 
   return (
     <>
-      <section className="personalInfo">
+      <section aria-label="Personal Info Form" className="personalInfo">
         <h2>Personal Info</h2>
         <form className="infoForm" onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
