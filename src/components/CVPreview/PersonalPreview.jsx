@@ -7,7 +7,7 @@ import {
 
 export default function PersonalPreview({ personalInfo }) {
   return (
-    <div className="personalPreview">
+    <section aria-label="Personal Preview" className="personalPreview">
       <h3>
         {personalInfo.name} {personalInfo.surname}
       </h3>
@@ -24,6 +24,6 @@ export default function PersonalPreview({ personalInfo }) {
         {personalInfo.email}
       </p>
       <p>{personalInfo.about}</p>
-    </div>
+    </section>
   );
 }
