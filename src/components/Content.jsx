@@ -5,13 +5,13 @@ import PersonalInfo from "./CVForm/PersonalInfo";
 import Preview from "./CVPreview/Preview";
 
 export default function Content() {
-  const [formData, setFormData] = useState({});
+  const [personalData, setPersonalData] = useState({});
 
   const handleFormSubmit = (data) => {
-    setFormData(data);
+    setPersonalData(data);
   };
 
-  useEffect(() => {}, [formData]);
+  useEffect(() => {}, [personalData]);
 
   return (
     <>
@@ -22,7 +22,7 @@ export default function Content() {
             <Education />
             <Experience />
           </div>
-          <Preview personalInfo={formData} />
+          <Preview personalInfo={personalData} />
         </div>
       </div>
     </>
