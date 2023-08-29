@@ -1,18 +1,11 @@
-export default function EducationPreview({
-  department,
-  university,
-  start,
-  end,
-  grad,
-}) {
+export default function EducationPreview({ educationInfo }) {
   return (
     <div className="educationPreview">
       <h3>Education</h3>
-      <p>{department}</p>
-      <p>{university}</p>
-      <p>{start}</p>
-      <p>{end}</p>
-      <p>{grad}</p>
+      <p>{educationInfo.university}</p>
+      <p>{educationInfo.department}</p>
+      <p>{educationInfo.start}</p>
+      <p>{educationInfo.graduation}</p>
     </div>
   );
 }
