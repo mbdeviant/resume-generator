@@ -22,11 +22,11 @@ export default function Content() {
     <>
       <div className="content">
         <div className="mainContainer">
-          <div className="forms">
+          <section aria-label="Forms" className="forms">
             <PersonalInfo onSubmit={handlePersonalData} />
             <Education onSubmit={handleEducationData} />
             <Experience />
-          </div>
+          </section>
           <Preview personalInfo={personalData} educationInfo={educationData} />
         </div>
       </div>
