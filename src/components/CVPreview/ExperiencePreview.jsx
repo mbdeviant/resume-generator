@@ -6,13 +6,13 @@ export default function ExperiencePreview({
   desc,
 }) {
   return (
-    <div className="experiencePreview">
+    <section aria-label="Experience Preview" className="experiencePreview">
       <h3>Experience</h3>
       <p>{position}</p>
       <p>{company}</p>
       <p>{start}</p>
       <p>{end}</p>
       <p>{desc}</p>
-    </div>
+    </section>
   );
 }
