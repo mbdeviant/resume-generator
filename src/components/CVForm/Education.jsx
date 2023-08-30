@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Buttons from "../buttons";
 
 export default function Education({ onSubmit }) {
@@ -35,6 +35,9 @@ export default function Education({ onSubmit }) {
     onSubmit(savedEducations);
     clearForm();
   };
+  useEffect(() => {
+    onSubmit(savedEducations);
+  }, [savedEducations, onSubmit]);
 
   function clearForm() {
     setEducationData({
