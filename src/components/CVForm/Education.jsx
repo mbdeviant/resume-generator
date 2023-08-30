@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 import Button from "../button";
 
 export default function Education({ onSubmit }) {
   const [educationData, setEducationData] = useState({
+    id: "",
     university: "",
     department: "",
     startDate: "",
@@ -20,12 +22,19 @@ export default function Education({ onSubmit }) {
   };
 
   const saveEducationData = () => {
+    const id = uuidv4();
     const university = educationData.university;
     const department = educationData.department;
     const startDate = educationData.startDate;
     const graduation = educationData.graduation;
 
-    let newEducationData = { university, department, startDate, graduation };
+    let newEducationData = {
+      id,
+      university,
+      department,
+      startDate,
+      graduation,
+    };
     setSavedEducations([...savedEducations, newEducationData]);
   };
 
