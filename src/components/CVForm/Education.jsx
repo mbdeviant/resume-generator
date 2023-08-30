@@ -8,6 +8,9 @@ export default function Education({ onSubmit }) {
     startDate: "",
     graduation: "",
   });
+
+  const [savedEducations, setSavedEducations] = useState([]);
+
   const handleInput = (e) => {
     const { name, value } = e.target;
     setEducationData((prevData) => ({
@@ -16,10 +19,32 @@ export default function Education({ onSubmit }) {
     }));
   };
 
+  const saveEducationData = () => {
+    const university = educationData.university;
+    const department = educationData.department;
+    const startDate = educationData.startDate;
+    const graduation = educationData.graduation;
+
+    let newEducationData = { university, department, startDate, graduation };
+    setSavedEducations([...savedEducations, newEducationData]);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(educationData);
+    saveEducationData();
+    onSubmit(savedEducations);
+    clearForm();
   };
+
+  function clearForm() {
+    setEducationData({
+      university: "",
+      department: "",
+      startDate: "",
+      graduation: "",
+    });
+  }
+
   return (
     <section aria-label="Education Info Form" className="education">
       <h2>Education</h2>
@@ -29,7 +54,7 @@ export default function Education({ onSubmit }) {
           type="text"
           id="university"
           name="university"
-          value={educationData.value}
+          value={educationData.university}
           onChange={handleInput}
           required
         />
@@ -38,7 +63,7 @@ export default function Education({ onSubmit }) {
           type="text"
           id="department"
           name="department"
-          value={educationData.value}
+          value={educationData.department}
           onChange={handleInput}
           required
         />
