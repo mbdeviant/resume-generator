@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Education from "./CVForm/Education";
 import Experience from "./CVForm/Experience";
 import PersonalInfo from "./CVForm/PersonalInfo";
@@ -15,9 +15,16 @@ export default function Content() {
     setEducationData(data);
     console.log(data);
   };
+  const handleRemoveEducation = (educationId) => {
+    const updatedEducationData = educationData.filter(
+      (education) => education.id !== educationId
+    );
+    setEducationData(updatedEducationData);
+    console.log(updatedEducationData);
+  };
 
-  useEffect(() => {}, [personalData]);
-  useEffect(() => {}, [educationData]);
+  // something wrong with state management, removing the clicked item
+  // then immediately adding it again
 
   return (
     <>
@@ -25,10 +32,17 @@ export default function Content() {
         <div className="mainContainer">
           <section aria-label="Forms" className="forms">
             <PersonalInfo onSubmit={handlePersonalData} />
-            <Education onSubmit={handleEducationData} />
+            <Education
+              onSubmit={handleEducationData}
+              onRemoveEducation={handleRemoveEducation}
+            />
             <Experience />
           </section>
-          <Preview personalInfo={personalData} educationInfo={educationData} />
+          <Preview
+            personalInfo={personalData}
+            educationInfo={educationData}
+            onRemoveEducation={handleRemoveEducation}
+          />
         </div>
       </div>
     </>
