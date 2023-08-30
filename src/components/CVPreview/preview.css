@@ -1,0 +1,8 @@
+.educationItem {
+  display: flex;
+  justify-content: space-between;
+}
+.removeButton {
+  padding: 4px;
+  height: fit-content;
+}
