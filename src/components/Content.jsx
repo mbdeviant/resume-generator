@@ -6,13 +6,14 @@ import Preview from "./CVPreview/Preview";
 
 export default function Content() {
   const [personalData, setPersonalData] = useState({});
-  const [educationData, setEducationData] = useState({});
+  const [educationData, setEducationData] = useState([]);
 
   const handlePersonalData = (data) => {
     setPersonalData(data);
   };
   const handleEducationData = (data) => {
     setEducationData(data);
+    console.log(data);
   };
 
   useEffect(() => {}, [personalData]);
