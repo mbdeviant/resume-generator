@@ -1,4 +1,4 @@
-import Buttons from "../buttons";
+import Button from "../button";
 
 export default function Experience() {
   return (
@@ -15,7 +15,7 @@ export default function Experience() {
         <input type="date" id="endDate" />
         <label htmlFor="description">Description</label>
         <input type="text" id="description" />
-        <Buttons />
+        <Button />
       </form>
     </section>
   );
