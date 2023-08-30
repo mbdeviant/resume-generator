@@ -21,7 +21,19 @@ export default function PersonalInfo({ onSubmit }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(personalData);
+    clearForm();
   };
+
+  function clearForm() {
+    setFormData({
+      name: "",
+      surname: "",
+      address: "",
+      number: "",
+      email: "",
+      about: "",
+    });
+  }
 
   return (
     <>
