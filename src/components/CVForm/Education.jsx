@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Buttons from "../buttons";
+import Button from "../button";
 
 export default function Education({ onSubmit }) {
   const [educationData, setEducationData] = useState({
@@ -88,7 +88,7 @@ export default function Education({ onSubmit }) {
           onChange={handleInput}
           required
         />
-        <Buttons />
+        <Button />
       </form>
     </section>
   );
