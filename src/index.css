@@ -54,7 +54,7 @@ h1 {
 }
 .btnContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 8px;
 }
 button {
