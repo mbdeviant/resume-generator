@@ -13,13 +13,14 @@ export default function Content() {
   };
   const handleEducationData = (data) => {
     setEducationData(data);
-    console.log(data);
   };
   const handleRemoveEducation = (educationId) => {
     const updatedEducationData = educationData.filter(
       (education) => education.id !== educationId
     );
     setEducationData(updatedEducationData);
+
+    console.log(educationData);
     console.log(updatedEducationData);
   };
 
@@ -32,7 +33,11 @@ export default function Content() {
         <div className="mainContainer">
           <section aria-label="Forms" className="forms">
             <PersonalInfo onSubmit={handlePersonalData} />
-            <Education onSubmit={handleEducationData} />
+            <Education
+              onSubmit={handleEducationData}
+              onRemove={handleRemoveEducation}
+              updatedData={educationData}
+            />
             <Experience />
           </section>
           <Preview
