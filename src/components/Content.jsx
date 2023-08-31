@@ -32,10 +32,7 @@ export default function Content() {
         <div className="mainContainer">
           <section aria-label="Forms" className="forms">
             <PersonalInfo onSubmit={handlePersonalData} />
-            <Education
-              onSubmit={handleEducationData}
-              onRemoveEducation={handleRemoveEducation}
-            />
+            <Education onSubmit={handleEducationData} />
             <Experience />
           </section>
           <Preview
