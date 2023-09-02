@@ -72,16 +72,49 @@ export default function Experience() {
       <h2>Experience</h2>
       <form className="experienceForm" onSubmit={handleSubmit}>
         <label htmlFor="position">Position</label>
-        <input type="text" id="position" />
+        <input
+          type="text"
+          id="position"
+          name="position"
+          value={experienceData.position}
+          onChange={handleInput}
+          required
+        />
         <label htmlFor="company">Company</label>
-        <input type="text" id="company" />
+        <input
+          type="text"
+          id="company"
+          name="company"
+          value={experienceData.company}
+          onChange={handleInput}
+        />
         <label htmlFor="startDate">Start Date</label>
-        <input type="date" id="startDate" />
+        <input
+          type="date"
+          id="startDate"
+          name="startDate"
+          value={experienceData.startDate}
+          onChange={handleInput}
+          required
+        />
         <label htmlFor="endDate">End Date</label>
-        <input type="date" id="endDate" />
+        <input
+          type="date"
+          id="endDate"
+          name="endDate"
+          value={experienceData.endDate}
+          onChange={handleInput}
+          required
+        />
         <label htmlFor="description">Description</label>
-        <input type="text" id="description" />
-        <Button />
+        <input
+          type="text"
+          id="description"
+          name="description"
+          value={experienceData.description}
+          onChange={handleInput}
+        />
+        <Button onRemove={handleRemove} />
       </form>
     </section>
   );
