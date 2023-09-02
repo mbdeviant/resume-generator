@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Button from "../button";
 
@@ -40,10 +40,37 @@ export default function Experience() {
     setSavedExperience([...savedExperience, newExperienceData]);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    saveExperienceData();
+    onSubmit(savedExperience);
+    clearForm();
+  };
+
+  useEffect(() => {
+    onSubmit(savedExperience);
+  }, [savedExperience]);
+
+  function clearForm() {
+    setExperienceData({
+      position: "",
+      company: "",
+      startDate: "",
+      endDate: "",
+      description: "",
+    });
+  }
+
+  function handleRemove() {
+    const updatedData = [...savedExperience];
+    updatedData.pop();
+    setSavedExperience(updatedData);
+  }
+
   return (
     <section aria-label="Experience Info Form" className="experience">
       <h2>Experience</h2>
-      <form className="experienceForm">
+      <form className="experienceForm" onSubmit={handleSubmit}>
         <label htmlFor="position">Position</label>
         <input type="text" id="position" />
         <label htmlFor="company">Company</label>
