@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Button from "../button";
 
-export default function Education({ onSubmit, onRemove, updatedData }) {
+export default function Education({ onSubmit }) {
+  const [savedEducations, setSavedEducations] = useState([]);
   const [educationData, setEducationData] = useState({
     id: "",
     university: "",
@@ -10,16 +11,6 @@ export default function Education({ onSubmit, onRemove, updatedData }) {
     startDate: "",
     graduation: "",
   });
-
-  const [savedEducations, setSavedEducations] = useState([]);
-
-  const handleRemoveEducation = (educationId) => {
-    const updatedEducationData = educationData.filter(
-      (education) => education.id !== educationId
-    );
-    onRemove(educationId); // Call the onRemove function from props
-    setSavedEducations(updatedEducationData);
-  };
 
   const handleInput = (e) => {
     const { name, value } = e.target;
@@ -43,6 +34,7 @@ export default function Education({ onSubmit, onRemove, updatedData }) {
       startDate,
       graduation,
     };
+
     setSavedEducations([...savedEducations, newEducationData]);
   };
 
@@ -54,7 +46,6 @@ export default function Education({ onSubmit, onRemove, updatedData }) {
   };
   useEffect(() => {
     onSubmit(savedEducations);
-    console.log(savedEducations);
   }, [savedEducations, onSubmit]);
 
   function clearForm() {
@@ -66,7 +57,12 @@ export default function Education({ onSubmit, onRemove, updatedData }) {
     });
   }
   function onClick() {
-    console.log(savedEducations);
+    console.log(educationData);
+  }
+  function handleRemove() {
+    const updatedData = [...savedEducations];
+    updatedData.pop();
+    setSavedEducations(updatedData);
   }
 
   return (
@@ -109,7 +105,7 @@ export default function Education({ onSubmit, onRemove, updatedData }) {
           onChange={handleInput}
           required
         />
-        <Button onClick={onClick} />
+        <Button onClick={onClick} onRemove={handleRemove} />
       </form>
     </section>
   );
