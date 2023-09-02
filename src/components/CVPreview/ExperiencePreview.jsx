@@ -1,18 +1,16 @@
-export default function ExperiencePreview({
-  position,
-  company,
-  start,
-  end,
-  desc,
-}) {
+export default function ExperiencePreview({ experienceInfo }) {
   return (
     <section aria-label="Experience Preview" className="experiencePreview">
       <h3>Experience</h3>
-      <p>{position}</p>
-      <p>{company}</p>
-      <p>{start}</p>
-      <p>{end}</p>
-      <p>{desc}</p>
+      {experienceInfo.map((experience) => (
+        <div key={experience.id} className="experienceItem">
+          <p>{experience.position}</p>
+          <p>{experience.company}</p>
+          <p>From {experience.startDate}</p>
+          <p>To {experience.endDate}</p>
+          <p>{experience.description}</p>
+        </div>
+      ))}
     </section>
   );
 }
