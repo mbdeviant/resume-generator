@@ -1,6 +1,17 @@
+import { useState } from "react";
 import Button from "../button";
 
 export default function Experience() {
+  const [savedExperience, setSavedExperience] = useState([]);
+  const [experienceData, setExperienceData] = useState({
+    id: "",
+    position: "",
+    company: "",
+    startDate: "",
+    endDate: "",
+    description: "",
+  });
+
   return (
     <section aria-label="Experience Info Form" className="experience">
       <h2>Experience</h2>
