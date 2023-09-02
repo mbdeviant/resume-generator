@@ -12,7 +12,6 @@ export default function Content() {
     setPersonalData(data);
   };
   const handleEducationData = (data) => {
-    console.log(educationData, "incoming");
     setEducationData(data);
   };
 
