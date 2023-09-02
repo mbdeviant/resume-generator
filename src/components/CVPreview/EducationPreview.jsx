@@ -1,6 +1,6 @@
 import "./preview.css";
 
-export default function EducationPreview({ educationInfo, onRemoveEducation }) {
+export default function EducationPreview({ educationInfo }) {
   return (
     <section aria-label="Education Preview" className="educationPreview">
       <h3>Education</h3>
@@ -12,12 +12,6 @@ export default function EducationPreview({ educationInfo, onRemoveEducation }) {
             <p>From {education.startDate}</p>
             <p>To {education.graduation}</p>
           </div>
-          <button
-            className="removeButton"
-            onClick={() => onRemoveEducation(education.id)}
-          >
-            x
-          </button>
         </div>
       ))}
     </section>
