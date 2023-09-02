@@ -5,16 +5,13 @@ import PersonalPreview from "./PersonalPreview";
 export default function Preview({
   personalInfo,
   educationInfo,
-  onRemoveEducation,
+  experienceInfo,
 }) {
   return (
     <section className="preview" aria-label="CV Preview">
       <PersonalPreview personalInfo={personalInfo} />
-      <EducationPreview
-        educationInfo={educationInfo}
-        onRemoveEducation={onRemoveEducation}
-      />
-      <ExperiencePreview />
+      <EducationPreview educationInfo={educationInfo} />
+      <ExperiencePreview experienceInfo={experienceInfo} />
     </section>
   );
 }
