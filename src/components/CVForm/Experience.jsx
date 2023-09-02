@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Button from "../button";
 
-export default function Experience() {
+export default function Experience({ onSubmit }) {
   const [savedExperience, setSavedExperience] = useState([]);
   const [experienceData, setExperienceData] = useState({
     id: "",
@@ -49,7 +49,7 @@ export default function Experience() {
 
   useEffect(() => {
     onSubmit(savedExperience);
-  }, [savedExperience]);
+  }, [savedExperience, onSubmit]);
 
   function clearForm() {
     setExperienceData({
