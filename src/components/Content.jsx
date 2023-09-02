@@ -12,20 +12,9 @@ export default function Content() {
     setPersonalData(data);
   };
   const handleEducationData = (data) => {
+    console.log(educationData, "incoming");
     setEducationData(data);
   };
-  const handleRemoveEducation = (educationId) => {
-    const updatedEducationData = educationData.filter(
-      (education) => education.id !== educationId
-    );
-    setEducationData(updatedEducationData);
-
-    console.log(educationData);
-    console.log(updatedEducationData);
-  };
-
-  // something wrong with state management, removing the clicked item
-  // then immediately adding it again
 
   return (
     <>
@@ -33,18 +22,10 @@ export default function Content() {
         <div className="mainContainer">
           <section aria-label="Forms" className="forms">
             <PersonalInfo onSubmit={handlePersonalData} />
-            <Education
-              onSubmit={handleEducationData}
-              onRemove={handleRemoveEducation}
-              updatedData={educationData}
-            />
+            <Education onSubmit={handleEducationData} />
             <Experience />
           </section>
-          <Preview
-            personalInfo={personalData}
-            educationInfo={educationData}
-            onRemoveEducation={handleRemoveEducation}
-          />
+          <Preview personalInfo={personalData} educationInfo={educationData} />
         </div>
       </div>
     </>
