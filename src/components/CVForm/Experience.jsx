@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import Button from "../button";
 
 export default function Experience() {
@@ -11,6 +12,33 @@ export default function Experience() {
     endDate: "",
     description: "",
   });
+
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    setExperienceData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const saveExperienceData = () => {
+    const id = uuidv4();
+    const position = experienceData.position;
+    const company = experienceData.company;
+    const startDate = experienceData.startDate;
+    const endDate = experienceData.endDate;
+    const description = experienceData.description;
+
+    let newExperienceData = {
+      id,
+      position,
+      company,
+      startDate,
+      endDate,
+      description,
+    };
+    setSavedExperience([...savedExperience, newExperienceData]);
+  };
 
   return (
     <section aria-label="Experience Info Form" className="experience">
