@@ -56,9 +56,7 @@ export default function Education({ onSubmit }) {
       graduation: "",
     });
   }
-  function onClick() {
-    console.log(educationData);
-  }
+
   function handleRemove() {
     const updatedData = [...savedEducations];
     updatedData.pop();
@@ -105,7 +103,7 @@ export default function Education({ onSubmit }) {
           onChange={handleInput}
           required
         />
-        <Button onClick={onClick} onRemove={handleRemove} />
+        <Button onRemove={handleRemove} />
       </form>
     </section>
   );
