@@ -1,6 +1,15 @@
+import { useState } from "react";
+
 export default function Header() {
+  const [reload, setReload] = useState(false);
+
+  function handleClick() {
+    setReload(true);
+  }
+
+  if (reload) window.location.reload();
   return (
-    <header className="header">
+    <header className="header" onClick={handleClick}>
       <h1>CV Generator</h1>
     </header>
   );
