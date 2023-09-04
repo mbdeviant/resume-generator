@@ -86,8 +86,7 @@ export default function PersonalInfo({ onSubmit }) {
             required
           />
           <label htmlFor="about">About</label>
-          <input
-            type="text"
+          <textarea
             id="about"
             name="about"
             value={personalData.about}

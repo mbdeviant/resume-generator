@@ -107,8 +107,7 @@ export default function Experience({ onSubmit }) {
           required
         />
         <label htmlFor="description">Description</label>
-        <input
-          type="text"
+        <textarea
           id="description"
           name="description"
           value={experienceData.description}
