@@ -42,7 +42,8 @@ h1 {
 }
 .mainContainer {
   display: flex;
-  justify-content: center;
+
+  justify-content: space-around;
   gap: 50px;
   border: 2px solid gold;
 }
@@ -67,6 +68,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-top: 9px;
 }
 button:hover {
   border-color: #646cff;
@@ -75,11 +77,29 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+input {
+  min-height: 40px;
+  border-radius: 7px;
+  border: none;
+  padding: 0 6px;
+  margin-bottom: 5px;
+  min-width: 200px;
+  display: block;
+}
+input:active {
+  border: 2px solid var(--darkBlue);
+}
+.forms {
+  border: 1px solid blue;
+  display: flex;
+  padding: 14px;
+}
 .infoForm,
 .experienceForm,
 .educationForm {
   display: flex;
   flex-direction: column;
+  max-width: 250px;
 }
 .footer {
   z-index: -1;
