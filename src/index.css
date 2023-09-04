@@ -39,6 +39,8 @@ h1 {
   padding: 12px 0;
   min-width: 100%;
   text-align: center;
+  cursor: pointer;
+  user-select: none;
 }
 .mainContainer {
   display: flex;
