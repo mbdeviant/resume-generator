@@ -106,6 +106,10 @@ textarea {
   flex-direction: column;
   max-width: 250px;
 }
+.btnContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
 .footer {
   z-index: -1;
   left: 0;
