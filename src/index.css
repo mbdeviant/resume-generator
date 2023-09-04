@@ -89,6 +89,11 @@ input {
 input:active {
   border: 2px solid var(--darkBlue);
 }
+
+textarea {
+  width: 208px;
+  resize: vertical;
+}
 .forms {
   border: 1px solid blue;
   display: flex;
