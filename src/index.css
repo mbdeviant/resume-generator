@@ -73,6 +73,9 @@ label {
   justify-content: center;
   padding-top: 8px;
 }
+.preview {
+  color: #213547;
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -101,6 +104,8 @@ input {
   min-width: 200px;
   display: block;
   font-size: 16px;
+  color: black;
+  background-color: #dbd8d8;
 }
 input:active {
   border: 2px solid var(--darkBlue);
@@ -109,6 +114,8 @@ input:active {
 textarea {
   width: 208px;
   resize: vertical;
+  color: black;
+  background-color: #dbd8d8;
 }
 
 .infoForm,
