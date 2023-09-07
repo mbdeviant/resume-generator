@@ -73,7 +73,11 @@ label {
   padding-top: 8px;
 }
 .preview {
+  border: 1px solid black;
+  min-width: 600px;
+  padding: 0 14px;
   color: #213547;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 button {
   border-radius: 8px;
