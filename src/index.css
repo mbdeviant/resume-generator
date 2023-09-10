@@ -53,6 +53,7 @@ label,
 h2 {
   color: #213547;
 }
+
 label {
   font-size: 18px;
 }
@@ -78,6 +79,7 @@ label {
   display: flex;
   justify-content: center;
   padding-top: 8px;
+  gap: 5px;
 }
 .preview {
   border: 1px solid black;
@@ -89,6 +91,7 @@ label {
 }
 
 button {
+  width: 100%;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.3em 1.1em;
