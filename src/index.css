@@ -178,15 +178,19 @@ textarea {
   margin: 0;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media (max-width: 849px) {
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  a:hover {
-    color: #747bff;
+
+  .preview,
+  .forms {
+    width: 80%;
+    min-width: 200px;
   }
-  button {
-    background-color: #f9f9f9;
+  .footer {
+    z-index: -1;
   }
 }
