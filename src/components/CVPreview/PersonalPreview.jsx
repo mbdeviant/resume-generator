@@ -8,7 +8,7 @@ import {
 export default function PersonalPreview({ personalInfo }) {
   return (
     <section aria-label="Personal Preview" className="personalPreview">
-      <h3>
+      <h3 className="name">
         {personalInfo.name} {personalInfo.surname}
       </h3>
       <p>
