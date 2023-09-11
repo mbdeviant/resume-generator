@@ -6,3 +6,6 @@
   padding: 4px;
   height: fit-content;
 }
+.name {
+  font-size: 2em;
+}
