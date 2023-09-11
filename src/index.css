@@ -184,6 +184,10 @@ textarea {
     flex-direction: column;
     align-items: center;
   }
+  h1 {
+    padding: 12px 0px;
+    font-size: 2.5em;
+  }
 
   .preview,
   .forms {
