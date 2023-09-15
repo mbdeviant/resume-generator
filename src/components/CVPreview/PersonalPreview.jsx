@@ -1,3 +1,4 @@
+import "./preview.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,
@@ -11,15 +12,15 @@ export default function PersonalPreview({ personalInfo }) {
       <h3 className="name">
         {personalInfo.name} {personalInfo.surname}
       </h3>
-      <p>
+      <p className="infoIcon">
         <FontAwesomeIcon icon={faLocationDot} />
         {personalInfo.address}
       </p>
-      <p>
+      <p className="infoIcon">
         <FontAwesomeIcon icon={faPhone} />
         {personalInfo.number}
       </p>
-      <p>
+      <p className="infoIcon">
         <FontAwesomeIcon icon={faEnvelope} />
         {personalInfo.email}
       </p>
