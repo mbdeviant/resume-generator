@@ -1,6 +1,7 @@
 import EducationPreview from "./EducationPreview";
 import ExperiencePreview from "./ExperiencePreview";
 import PersonalPreview from "./PersonalPreview";
+import "./preview.css";
 
 export default function Preview({
   personalInfo,

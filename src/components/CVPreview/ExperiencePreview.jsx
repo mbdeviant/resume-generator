@@ -1,3 +1,5 @@
+import "./preview.css";
+
 export default function ExperiencePreview({ experienceInfo }) {
   return (
     <section aria-label="Experience Preview" className="experiencePreview">
