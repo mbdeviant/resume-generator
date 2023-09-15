@@ -2,10 +2,17 @@
   display: flex;
   justify-content: space-between;
 }
-.removeButton {
-  padding: 4px;
-  height: fit-content;
-}
+
 .name {
-  font-size: 2em;
+  margin-top: 23px;
+  font-size: 2.2em;
+}
+.personalPreview > p {
+  font-size: 18px;
+}
+.infoIcon {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 7px;
 }
