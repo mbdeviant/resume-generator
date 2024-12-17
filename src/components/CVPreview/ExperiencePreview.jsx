@@ -11,6 +11,7 @@ export default function ExperiencePreview({ experienceInfo }) {
           <p>From {experience.startDate}</p>
           <p>To {experience.endDate}</p>
           <p>{experience.description}</p>
+          <hr />
         </div>
       ))}
     </section>

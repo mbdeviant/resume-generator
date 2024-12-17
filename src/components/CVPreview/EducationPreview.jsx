@@ -11,6 +11,7 @@ export default function EducationPreview({ educationInfo }) {
             <p>{education.department}</p>
             <p>From {education.startDate}</p>
             <p>To {education.graduation}</p>
+            <hr />
           </div>
         </div>
       ))}
