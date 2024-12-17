@@ -12,6 +12,7 @@ export default function PersonalPreview({ personalInfo }) {
       <h3 className="name">
         {personalInfo.name} {personalInfo.surname}
       </h3>
+      <h4>{personalInfo.title}</h4>
       <p className="infoIcon">
         <FontAwesomeIcon icon={faLocationDot} />
         {personalInfo.address}
