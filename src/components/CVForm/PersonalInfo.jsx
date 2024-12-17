@@ -4,6 +4,7 @@ export default function PersonalInfo({ onSubmit }) {
   const [personalData, setFormData] = useState({
     name: "",
     surname: "",
+    title: "", //new
     address: "",
     number: "",
     email: "",
@@ -55,6 +56,15 @@ export default function PersonalInfo({ onSubmit }) {
             id="surname"
             name="surname"
             value={personalData.surname}
+            onChange={handleInput}
+            required
+          />
+          <label htmlFor="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            value={personalData.title}
             onChange={handleInput}
             required
           />
