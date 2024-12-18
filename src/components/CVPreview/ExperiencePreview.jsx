@@ -6,7 +6,7 @@ export default function ExperiencePreview({ experienceInfo }) {
       <h4>Experience</h4>
       {experienceInfo.map((experience) => (
         <div key={experience.id} className="experienceItem">
-          <p>{experience.position}</p>
+          <p className="bold">{experience.position}</p>
           <p>{experience.company}</p>
           <p>From {experience.startDate}</p>
           <p>To {experience.endDate}</p>

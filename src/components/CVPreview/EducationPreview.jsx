@@ -7,7 +7,7 @@ export default function EducationPreview({ educationInfo }) {
       {educationInfo.map((education) => (
         <div key={education.id} className="educationItem">
           <div>
-            <p>{education.university}</p>
+            <p className="bold">{education.university}</p>
             <p>{education.department}</p>
             <p>From {education.startDate}</p>
             <p>To {education.graduation}</p>
