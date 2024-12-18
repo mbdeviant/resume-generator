@@ -3,7 +3,7 @@ import "./preview.css";
 export default function EducationPreview({ educationInfo }) {
   return (
     <section aria-label="Education Preview" className="educationPreview">
-      <h3>Education</h3>
+      <h4>Education</h4>
       {educationInfo.map((education) => (
         <div key={education.id} className="educationItem">
           <div>
