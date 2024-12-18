@@ -9,10 +9,12 @@ import {
 export default function PersonalPreview({ personalInfo }) {
   return (
     <section aria-label="Personal Preview" className="personalPreview">
-      <h3 className="name">
-        {personalInfo.name} {personalInfo.surname}
-      </h3>
-      <h4>{personalInfo.title}</h4>
+      <div className="previewHeader">
+        <h3 className="name">
+          {personalInfo.name} {personalInfo.surname}
+        </h3>
+        <h3 className="title">{personalInfo.title}</h3>
+      </div>
       <p className="infoIcon">
         <FontAwesomeIcon icon={faLocationDot} />
         {personalInfo.address}
@@ -25,6 +27,7 @@ export default function PersonalPreview({ personalInfo }) {
         <FontAwesomeIcon icon={faEnvelope} />
         {personalInfo.email}
       </p>
+      <h4>Summary</h4>
       <p>{personalInfo.about}</p>
     </section>
   );
