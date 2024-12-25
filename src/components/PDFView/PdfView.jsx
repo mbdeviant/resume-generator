@@ -1,14 +1,17 @@
 import { Page, Text, View, Document } from "@react-pdf/renderer";
 
-const PDFPreview = () => {
+const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
   return (
     <Document>
       <Page size="A4">
         <View>
-          <Text>Section #1</Text>
+          <Text>{personalInfo}</Text>
         </View>
         <View>
-          <Text>Section #2</Text>
+          <Text>{educationInfo}</Text>
+        </View>
+        <View>
+          <Text>{experienceInfo}</Text>
         </View>
       </Page>
     </Document>
