@@ -1,27 +1,22 @@
 import { Page, Text, View, Document } from "@react-pdf/renderer";
-import { PDFViewer } from "@react-pdf/renderer";
 
-export default function PdfView() {
-  const PreviewPDF = () => (
+const PDFPreview = () => {
+  return (
     <Document>
-      <Page size="A4" style={styles.page}>
-        <View style={styles.section}>
+      <Page size="A4">
+        <View>
           <Text>Section #1</Text>
         </View>
-        <View style={styles.section}>
+        <View>
           <Text>Section #2</Text>
         </View>
       </Page>
     </Document>
   );
+};
 
-  return (
-    <div>
-      <div>
-        <PDFViewer>
-          <PreviewPDF width="100%" height="100%" />
-        </PDFViewer>
-      </div>
-    </div>
-  );
-}
+export default PDFPreview;
+
+// so the deal is, pdf view is just an another component that
+// you need to stylise separately. use StyleSheet.create(see react-pdf docs)
+// since it's a pdf view, user will be able to download it via PDFViewer element
