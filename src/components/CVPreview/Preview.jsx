@@ -25,7 +25,11 @@ export default function Preview({
       <button onClick={handleDownloadPDF}>Save as PDF</button>
       {showPDF && (
         <PDFViewer style={{ width: "100%", height: "100vh" }}>
-          <PDFPreview />
+          <PDFPreview
+            personalInfo={"John Doe"}
+            educationInfo={"Firefighting school"}
+            experienceInfo={"Firefighting"}
+          />
         </PDFViewer>
       )}
     </div>
