@@ -5,13 +5,28 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
     <Document>
       <Page size="A4">
         <View>
-          <Text>{personalInfo}</Text>
+          <Text>
+            {/* this works */}
+            {personalInfo.name} works
+            {personalInfo.surname}
+            zed
+          </Text>
+          <Text>{personalInfo.title}</Text>
         </View>
         <View>
-          <Text>{educationInfo}</Text>
+          <Text>
+            {/* map these info */}
+            {/* {educationInfo.university}
+            {educationInfo.department} */}
+            section2
+          </Text>
         </View>
         <View>
-          <Text>{experienceInfo}</Text>
+          <Text>
+            {/* {experienceInfo.company}
+            {experienceInfo.position} */}
+            section3
+          </Text>
         </View>
       </Page>
     </Document>
@@ -19,7 +34,3 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
 };
 
 export default PDFPreview;
-
-// so the deal is, pdf view is just an another component that
-// you need to stylise separately. use StyleSheet.create(see react-pdf docs)
-// since it's a pdf view, user will be able to download it via PDFViewer element
