@@ -12,8 +12,21 @@ export default function Preview({
   experienceInfo,
 }) {
   const [showPDF, setShowPDF] = useState(false);
-  const handleDownloadPDF = () => {
-    setShowPDF(true);
+  const [pdfData, setPDFData] = useState(null);
+
+  const handleDownloadPDF = async () => {
+    const data = {
+      personalInfoPDF: personalInfo,
+      educationInfoPDF: educationInfo,
+      experienceInfoPDF: experienceInfo,
+    };
+    setPDFData(data);
+    console.log(pdfData.personalInfoPDF.name);
+    console.log(pdfData.personalInfoPDF.title);
+
+    if (data.personalInfoPDF && data.educationInfoPDF && data.experienceInfoPDF)
+      setShowPDF(true);
+    else setShowPDF(false);
   };
   return (
     <div>
@@ -26,9 +39,9 @@ export default function Preview({
       {showPDF && (
         <PDFViewer style={{ width: "100%", height: "100vh" }}>
           <PDFPreview
-            personalInfo={"John Doe"}
-            educationInfo={"Firefighting school"}
-            experienceInfo={"Firefighting"}
+            personalInfo={pdfData.personalInfoPDF}
+            educationInfo={pdfData.educationInfoPDF}
+            experienceInfo={pdfData.experienceInfoPDF}
           />
         </PDFViewer>
       )}
