@@ -1,32 +1,101 @@
-import { Page, Text, View, Document } from "@react-pdf/renderer";
+import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 
 const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
+  const styles = StyleSheet.create({
+    page: {
+      padding: 30,
+      fontSize: 12,
+      fontFamily: "Helvetica",
+      color: "#333",
+    },
+    header: {
+      textAlign: "center",
+      marginBottom: 20,
+    },
+    name: {
+      fontSize: 20,
+      fontWeight: "bold",
+    },
+    title: {
+      fontSize: 14,
+      fontWeight: "bold",
+      marginTop: 4,
+    },
+    section: {
+      marginBottom: 20,
+    },
+    sectionHeader: {
+      fontSize: 14,
+      fontWeight: "bold",
+      marginBottom: 8,
+      textDecoration: "underline",
+    },
+    infoRow: {
+      marginBottom: 6,
+    },
+    text: {
+      fontSize: 12,
+      marginBottom: 4,
+    },
+    boldText: {
+      fontWeight: "bold",
+    },
+    line: {
+      borderBottom: "1px solid #ccc",
+      marginVertical: 10,
+    },
+    duration: {
+      fontStyle: "italic",
+      color: "#555",
+    },
+  });
+
   return (
     <Document>
-      <Page size="A4">
-        <View>
-          <Text>
-            {/* this works */}
-            {personalInfo.name} works
-            {personalInfo.surname}
-            zed
+      <Page size="A4" style={styles.page}>
+        {/* Header Section */}
+        <View style={styles.header}>
+          <Text style={styles.name}>
+            {personalInfo.name} {personalInfo.surname}
           </Text>
-          <Text>{personalInfo.title}</Text>
+          <Text style={styles.title}>{personalInfo.title}</Text>
         </View>
-        <View>
-          <Text>
-            {/* map these info */}
-            {/* {educationInfo.university}
-            {educationInfo.department} */}
-            section2
-          </Text>
+
+        {/* Summary Section */}
+        <View style={styles.section}>
+          <Text style={styles.sectionHeader}>Summary</Text>
+          <Text style={styles.text}>{personalInfo.about || "N/A"}</Text>
         </View>
-        <View>
-          <Text>
-            {/* {experienceInfo.company}
-            {experienceInfo.position} */}
-            section3
-          </Text>
+
+        {/* Education Section */}
+        <View style={styles.section}>
+          <Text style={styles.sectionHeader}>Education</Text>
+          {educationInfo.map((edu) => (
+            <View key={edu.id} style={styles.infoRow}>
+              <Text style={styles.boldText}>{edu.university}</Text>
+              <Text>{edu.department}</Text>
+              <Text style={styles.duration}>
+                From {edu.startDate} to {edu.graduation}
+              </Text>
+              <View style={styles.line}></View>
+            </View>
+          ))}
+        </View>
+
+        {/* Experience Section */}
+        <View style={styles.section}>
+          <Text style={styles.sectionHeader}>Experience</Text>
+          {experienceInfo.map((exp) => (
+            <View key={exp.id} style={styles.infoRow}>
+              <Text style={styles.boldText}>{exp.company}</Text>
+              <Text>{exp.position}</Text>
+              <Text style={styles.duration}>
+                From {exp.startDate} to {exp.endDate || "Present"}
+              </Text>
+              <Text>{exp.description}</Text>
+              <View style={styles.line}></View>
+            </View>
+          ))}
         </View>
       </Page>
     </Document>
