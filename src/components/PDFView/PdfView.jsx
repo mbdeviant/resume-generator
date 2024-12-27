@@ -53,7 +53,6 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        {/* Header Section */}
         <View style={styles.header}>
           <Text style={styles.name}>
             {personalInfo.name} {personalInfo.surname}
@@ -61,13 +60,11 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
           <Text style={styles.title}>{personalInfo.title}</Text>
         </View>
 
-        {/* Summary Section */}
         <View style={styles.section}>
           <Text style={styles.sectionHeader}>Summary</Text>
           <Text style={styles.text}>{personalInfo.about || "N/A"}</Text>
         </View>
 
-        {/* Education Section */}
         <View style={styles.section}>
           <Text style={styles.sectionHeader}>Education</Text>
           {educationInfo.map((edu) => (
@@ -82,7 +79,6 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
           ))}
         </View>
 
-        {/* Experience Section */}
         <View style={styles.section}>
           <Text style={styles.sectionHeader}>Experience</Text>
           {experienceInfo.map((exp) => (
