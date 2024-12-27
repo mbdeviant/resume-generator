@@ -21,8 +21,6 @@ export default function Preview({
       experienceInfoPDF: experienceInfo,
     };
     setPDFData(data);
-    console.log(pdfData.personalInfoPDF.name);
-    console.log(pdfData.personalInfoPDF.title);
 
     if (data.personalInfoPDF && data.educationInfoPDF && data.experienceInfoPDF)
       setShowPDF(true);
