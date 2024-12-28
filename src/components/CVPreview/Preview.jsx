@@ -3,7 +3,7 @@ import EducationPreview from "./EducationPreview";
 import ExperiencePreview from "./ExperiencePreview";
 import PersonalPreview from "./PersonalPreview";
 import PDFPreview from "../PDFView/PdfView";
-import { PDFViewer } from "@react-pdf/renderer";
+import { pdf } from "@react-pdf/renderer";
 import "./preview.css";
 
 export default function Preview({
@@ -11,7 +11,6 @@ export default function Preview({
   educationInfo,
   experienceInfo,
 }) {
-  const [showPDF, setShowPDF] = useState(false);
   const [pdfData, setPDFData] = useState(null);
 
   const handleDownloadPDF = async () => {
@@ -22,9 +21,31 @@ export default function Preview({
     };
     setPDFData(data);
 
-    if (data.personalInfoPDF && data.educationInfoPDF && data.experienceInfoPDF)
-      setShowPDF(true);
-    else setShowPDF(false);
+    if (
+      pdfData &&
+      data.personalInfoPDF &&
+      data.educationInfoPDF &&
+      data.experienceInfoPDF
+    ) {
+      // Generate the PDF blob
+      const blob = await pdf(
+        <PDFPreview
+          personalInfo={data.personalInfoPDF}
+          educationInfo={data.educationInfoPDF}
+          experienceInfo={data.experienceInfoPDF}
+        />
+      ).toBlob();
+
+      // Create a download link and trigger it
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "cv.pdf";
+      link.click();
+      URL.revokeObjectURL(url); // Clean up
+    } else {
+      setShowPDF(false);
+    }
   };
   return (
     <div>
@@ -34,15 +55,6 @@ export default function Preview({
         <ExperiencePreview experienceInfo={experienceInfo} />
       </section>
       <button onClick={handleDownloadPDF}>Save as PDF</button>
-      {showPDF && (
-        <PDFViewer style={{ width: "100%", height: "100vh" }}>
-          <PDFPreview
-            personalInfo={pdfData.personalInfoPDF}
-            educationInfo={pdfData.educationInfoPDF}
-            experienceInfo={pdfData.experienceInfoPDF}
-          />
-        </PDFViewer>
-      )}
     </div>
   );
 }
