@@ -22,7 +22,7 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
       marginTop: 4,
     },
     contactInfo: {
-      // textAlign: "left",
+      marginBottom: 20,
       marginTop: 10,
       fontSize: 11,
       lineHeight: 1.4,
