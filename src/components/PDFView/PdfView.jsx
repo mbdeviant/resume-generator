@@ -22,7 +22,7 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
       marginTop: 4,
     },
     contactInfo: {
-      textAlign: "center",
+      // textAlign: "left",
       marginTop: 10,
       fontSize: 11,
       lineHeight: 1.4,
@@ -67,9 +67,9 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
         </View>
 
         <View style={styles.contactInfo}>
-          <Text>{personalInfo.address || "N/A"}</Text>
-          <Text>{personalInfo.phone || "N/A"}</Text>
           <Text>{personalInfo.email || "N/A"}</Text>
+          <Text>{personalInfo.number || "N/A"}</Text>
+          <Text>{personalInfo.address || "N/A"}</Text>
         </View>
 
         <View style={styles.section}>
