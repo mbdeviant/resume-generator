@@ -66,6 +66,12 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
           <Text style={styles.title}>{personalInfo.title}</Text>
         </View>
 
+        <View style={styles.contactInfo}>
+          <Text>{personalInfo.address || "N/A"}</Text>
+          <Text>{personalInfo.phone || "N/A"}</Text>
+          <Text>{personalInfo.email || "N/A"}</Text>
+        </View>
+
         <View style={styles.section}>
           <Text style={styles.sectionHeader}>Summary</Text>
           <Text style={styles.text}>{personalInfo.about || "N/A"}</Text>
