@@ -21,6 +21,12 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
       fontWeight: "bold",
       marginTop: 4,
     },
+    contactInfo: {
+      textAlign: "center",
+      marginTop: 10,
+      fontSize: 11,
+      lineHeight: 1.4,
+    },
     section: {
       marginBottom: 20,
     },
