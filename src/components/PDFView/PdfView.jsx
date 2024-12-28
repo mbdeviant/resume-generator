@@ -46,10 +46,7 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
     boldText: {
       fontWeight: "bold",
     },
-    line: {
-      borderBottom: "1px solid #ccc",
-      marginVertical: 10,
-    },
+
     duration: {
       fontStyle: "italic",
       color: "#555",
@@ -86,7 +83,6 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
               <Text style={styles.duration}>
                 From {edu.startDate} to {edu.graduation}
               </Text>
-              <View style={styles.line}></View>
             </View>
           ))}
         </View>
@@ -101,7 +97,6 @@ const PDFPreview = ({ personalInfo, educationInfo, experienceInfo }) => {
                 From {exp.startDate} to {exp.endDate || "Present"}
               </Text>
               <Text>{exp.description}</Text>
-              <View style={styles.line}></View>
             </View>
           ))}
         </View>
