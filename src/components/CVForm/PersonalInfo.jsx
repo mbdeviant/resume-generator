@@ -29,6 +29,7 @@ export default function PersonalInfo({ onSubmit }) {
     setFormData({
       name: "",
       surname: "",
+      title: "",
       address: "",
       number: "",
       email: "",
@@ -101,6 +102,7 @@ export default function PersonalInfo({ onSubmit }) {
             name="about"
             value={personalData.about}
             onChange={handleInput}
+            required
           />
           <button type="submit" aria-label="save button">
             Save
