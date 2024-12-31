@@ -227,6 +227,9 @@ a {
     min-width: 200px;
     overflow-y: scroll;
   }
+  .preview {
+    width: 90%;
+  }
   .footer {
     z-index: 1;
   }
