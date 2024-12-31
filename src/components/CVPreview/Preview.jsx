@@ -1,4 +1,3 @@
-import { useState } from "react";
 import EducationPreview from "./EducationPreview";
 import ExperiencePreview from "./ExperiencePreview";
 import PersonalPreview from "./PersonalPreview";
@@ -11,16 +10,12 @@ export default function Preview({
   educationInfo,
   experienceInfo,
 }) {
-  const [pdfData, setPDFData] = useState(null);
-
   const handleDownloadPDF = async () => {
     const data = {
       personalInfoPDF: personalInfo,
       educationInfoPDF: educationInfo,
       experienceInfoPDF: experienceInfo,
     };
-
-    setPDFData(data);
 
     const blob = await pdf(
       <PDFPreview
