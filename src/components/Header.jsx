@@ -10,7 +10,7 @@ export default function Header() {
   if (reload) window.location.reload();
   return (
     <header className="header" onClick={handleClick}>
-      <h1>CV Generator</h1>
+      <h1>Resume Generator</h1>
     </header>
   );
 }
