@@ -5,7 +5,7 @@ function Button({ onClick, onRemove }) {
         Add
       </button>
       <button type="button" onClick={onRemove}>
-        Remove
+        Remove last
       </button>
     </div>
   );
