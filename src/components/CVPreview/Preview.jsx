@@ -39,7 +39,9 @@ export default function Preview({
         <EducationPreview educationInfo={educationInfo} />
         <ExperiencePreview experienceInfo={experienceInfo} />
       </section>
-      <button onClick={handleDownloadPDF}>Save as PDF</button>
+      <button className="saveButton" onClick={handleDownloadPDF}>
+        Save as PDF
+      </button>
     </div>
   );
 }
