@@ -39,7 +39,11 @@ export default function Preview({
         <EducationPreview educationInfo={educationInfo} />
         <ExperiencePreview experienceInfo={experienceInfo} />
       </section>
-      <button className="saveButton" onClick={handleDownloadPDF}>
+      <button
+        className="saveButton"
+        aria-label="Save as PDF"
+        onClick={handleDownloadPDF}
+      >
         Save as PDF
       </button>
     </div>
