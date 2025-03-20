@@ -112,8 +112,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #646cff;
-  color: white;
+  background-color: #8f94ff;
+  color: black;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -129,6 +129,8 @@ button:hover {
 .saveButton {
   align-self: center;
   z-index: 909;
+  background-color: #8f94ff;
+  color: black;
 }
 .preview {
   width: 595px;
