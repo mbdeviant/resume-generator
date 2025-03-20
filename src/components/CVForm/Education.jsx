@@ -72,6 +72,7 @@ export default function Education({ onSubmit }) {
           type="text"
           id="university"
           name="university"
+          aria-label="University Input"
           value={educationData.university}
           onChange={handleInput}
           required
@@ -81,6 +82,7 @@ export default function Education({ onSubmit }) {
           type="text"
           id="department"
           name="department"
+          aria-label="Department Input"
           value={educationData.department}
           onChange={handleInput}
           required
@@ -90,6 +92,7 @@ export default function Education({ onSubmit }) {
           type="date"
           id="startDate"
           name="startDate"
+          aria-label=" University Start Date Input"
           value={educationData.startDate}
           onChange={handleInput}
           required
@@ -99,6 +102,7 @@ export default function Education({ onSubmit }) {
           type="date"
           id="graduation"
           name="graduation"
+          aria-label="University Graduation Input"
           value={educationData.graduation}
           onChange={handleInput}
           required

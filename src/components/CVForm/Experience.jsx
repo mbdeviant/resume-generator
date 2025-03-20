@@ -76,6 +76,7 @@ export default function Experience({ onSubmit }) {
           type="text"
           id="position"
           name="position"
+          aria-label="Position Input"
           value={experienceData.position}
           onChange={handleInput}
           required
@@ -85,6 +86,7 @@ export default function Experience({ onSubmit }) {
           type="text"
           id="company"
           name="company"
+          aria-label="Company Input"
           value={experienceData.company}
           onChange={handleInput}
         />
@@ -93,6 +95,7 @@ export default function Experience({ onSubmit }) {
           type="date"
           id="startDate"
           name="startDate"
+          aria-label="Experience Start Date Input"
           value={experienceData.startDate}
           onChange={handleInput}
           required
@@ -102,6 +105,7 @@ export default function Experience({ onSubmit }) {
           type="date"
           id="endDate"
           name="endDate"
+          aria-label="Experience End Date Input"
           value={experienceData.endDate}
           onChange={handleInput}
           required
@@ -110,6 +114,7 @@ export default function Experience({ onSubmit }) {
         <textarea
           id="description"
           name="description"
+          aria-label="Experience Description Input"
           value={experienceData.description}
           onChange={handleInput}
         />

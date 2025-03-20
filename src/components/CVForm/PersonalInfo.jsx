@@ -47,6 +47,7 @@ export default function PersonalInfo({ onSubmit }) {
             type="text"
             id="name"
             name="name"
+            aria-label="Name Input"
             value={personalData.name}
             onChange={handleInput}
             required
@@ -56,6 +57,7 @@ export default function PersonalInfo({ onSubmit }) {
             type="text"
             id="surname"
             name="surname"
+            aria-label="Surname Input"
             value={personalData.surname}
             onChange={handleInput}
             required
@@ -65,6 +67,7 @@ export default function PersonalInfo({ onSubmit }) {
             type="text"
             id="title"
             name="title"
+            aria-label="Title Input"
             value={personalData.title}
             onChange={handleInput}
             required
@@ -74,6 +77,7 @@ export default function PersonalInfo({ onSubmit }) {
             type="text"
             id="address"
             name="address"
+            aria-label="Address Input"
             value={personalData.address}
             onChange={handleInput}
             required
@@ -83,6 +87,7 @@ export default function PersonalInfo({ onSubmit }) {
             type="tel"
             id="number"
             name="number"
+            aria-label="Phone Number Input"
             value={personalData.number}
             onChange={handleInput}
             required
@@ -92,6 +97,7 @@ export default function PersonalInfo({ onSubmit }) {
             type="email"
             id="email"
             name="email"
+            aria-label="Email Input"
             value={personalData.email}
             onChange={handleInput}
             required
@@ -100,6 +106,7 @@ export default function PersonalInfo({ onSubmit }) {
           <textarea
             id="about"
             name="about"
+            aria-label="About Input"
             value={personalData.about}
             onChange={handleInput}
             required
