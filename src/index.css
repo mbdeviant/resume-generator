@@ -103,6 +103,10 @@ textarea:focus {
   outline: 2px solid #646cff;
   background-color: #333;
 }
+textarea {
+  resize: none;
+  min-height: 100px;
+}
 
 button {
   width: 100%;
