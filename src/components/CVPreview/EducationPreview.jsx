@@ -16,7 +16,6 @@ export default function EducationPreview({ educationInfo }) {
                 From {education.startDate}
               </p>
               <p aria-label="Graduation Date">To {education.graduation}</p>
-              <hr />
             </div>
           </div>
         ))

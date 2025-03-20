@@ -14,7 +14,6 @@ export default function ExperiencePreview({ experienceInfo }) {
             </p>
             <p aria-label="Experience End Date">To {experience.endDate}</p>
             <p aria-label="Experience Description">{experience.description}</p>
-            <hr />
           </div>
         ))
       ) : (
@@ -29,7 +28,6 @@ export default function ExperiencePreview({ experienceInfo }) {
             motion away from explosions. Extinguished hundreds of fires and
             mastered the art of looking cool while stepping out of a firetruck.
           </p>
-          <hr />
         </div>
       )}
     </section>
