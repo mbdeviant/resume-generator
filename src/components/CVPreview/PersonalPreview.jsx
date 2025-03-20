@@ -35,11 +35,6 @@ export default function PersonalPreview({ personalInfo }) {
         {personalInfo.about ||
           "I've extinguished approximately 547 fires, rescued 23 cats from trees (some of them were surprisingly ungrateful), and survived countless false alarms caused by burnt toast. Skilled in handling high-pressure situations—both figuratively and literally—and working efficiently as part of a team. Passionate about keeping communities safe, responding to emergencies, and making sure every fire hydrant in town feels appreciated."}
       </p>
-      <p aria-label="Developer's Note" style={{ color: "orange" }}>
-        This is just a preview. Only submitted data will appear in the PDF. If
-        no data is submitted in a section, that section will not appear in the
-        PDF.
-      </p>
     </section>
   );
 }
