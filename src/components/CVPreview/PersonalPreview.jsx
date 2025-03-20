@@ -17,19 +17,19 @@ export default function PersonalPreview({ personalInfo }) {
           {personalInfo.title || "Firefighter"}
         </h3>
       </div>
-      <p className="infoIcon" aria-label="Email">
+      <h3 className="infoIcon" aria-label="Email">
         <FontAwesomeIcon icon={faEnvelope} />
         {personalInfo.email || "johndoe@loremipsum.com"}
-      </p>
-      <p className="infoIcon" aria-label="Phone Number">
+      </h3>
+      <h3 className="infoIcon" aria-label="Phone Number">
         <FontAwesomeIcon icon={faPhone} />
         {personalInfo.number || "(905) 878-2725"}
-      </p>
-      <p className="infoIcon" aria-label="Address">
+      </h3>
+      <h3 className="infoIcon" aria-label="Address">
         <FontAwesomeIcon icon={faLocationDot} />
         {personalInfo.address ||
           "	9528 25 Hwy, Halton Hills, ON L9T 2X7, Canada"}
-      </p>
+      </h3>
       <h4>Summary</h4>
       <p aria-label="Summary">
         {personalInfo.about ||
