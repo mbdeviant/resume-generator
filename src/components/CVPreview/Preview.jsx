@@ -33,7 +33,7 @@ export default function Preview({
     URL.revokeObjectURL(url);
   };
   return (
-    <div>
+    <div className="previewContainer">
       <section className="preview" aria-label="CV Preview">
         <PersonalPreview personalInfo={personalInfo} />
         <EducationPreview educationInfo={educationInfo} />
